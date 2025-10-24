@@ -1,0 +1,174 @@
+/* FONTS:
+
+
+.spectral-regular {
+  font-family: "Spectral", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.spectral-bold {
+  font-family: "Spectral", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+} */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+  margin: 1em 0.2em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1em;
+}
+
+h3 {
+  font-size: 0.75em;
+}
+
+h4 {
+  font-size: 0.8em;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+ol,
+ul {
+  padding-left: 2em;
+}
+
+header {
+  display: flex;
+  padding: 1.5em 1em;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc017;
+  border-bottom: 1px solid #191919;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 40%;
+}
+
+header li {
+  margin: 0 1em;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.black-btn {
+  background-color: #191919;
+  color: white;
+  border: #191919 solid 1px;
+  padding: 0.8em 1em;
+  border-radius: 25px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em;
+  background-color: #ffc017;
+  border: #191919 solid 1px;
+  margin-bottom: 2em;
+}
+
+.hero h1 {
+  font-family: 'Spectral', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hero button {
+  width: 40%;
+}
+
+.trends-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.trend-title {
+  display: flex;
+  align-items: center;
+}
+
+.trends-section article {
+  display: flex;
+}
+
+.writer {
+  display: flex;
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.number {
+  font-size: 2em;
+  font-weight: 700;
+  color: #e6e7e7;
+  margin-right: 0.8em;
+  margin-top: 0.2em;
+}
+
+.writer img {
+  border-radius: 50px;
+  width: 30px;
+  margin-right: 0.5em;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  color: #929292;
+}
