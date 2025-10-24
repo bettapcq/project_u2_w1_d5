@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <header class="yellow">
+    <header id="myHeader" class="yellow">
       <img id="logo" src="./assets/imgs/svg/logo.svg" alt="logo" />
       <div>
         <ul>
@@ -9603,5 +9603,16 @@
         </section>
       </div>
     </main>
+    <script>
+      window.addEventListener('scroll', function (e) {
+        const header = document.getElementById('myHeader');
+        const changePoint = 100;
+        if (window.scrollY >= changePoint) {
+          header.classList.add('white');
+        } else {
+          header.classList.remove('white');
+        }
+      });
+    </script>
   </body>
 </html>
