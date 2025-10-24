@@ -48,19 +48,20 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 0.7em;
 }
 
 h3 {
-  font-size: 0.75em;
+  font-size: 0.6em;
 }
 
 h4 {
-  font-size: 0.8em;
+  font-size: 0.5em;
 }
 
 p {
   margin: 1em 0;
+  font-size: 0.3em;
 }
 
 a {
@@ -74,6 +75,11 @@ ul {
   padding-left: 2em;
 }
 
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
 header {
   display: flex;
   padding: 1.5em 1em;
@@ -81,6 +87,10 @@ header {
   align-items: center;
   background-color: #ffc017;
   border-bottom: 1px solid #191919;
+  position: sticky;
+  top: 0;
+  transition: background-color 0.6s ease;
+  z-index: 1000;
 }
 
 header div {
@@ -93,10 +103,16 @@ header div {
   width: 40%;
 }
 
+header ul {
+  display: flex;
+}
+
 header li {
   margin: 0 1em;
-  text-decoration: none;
-  list-style-type: none;
+}
+
+.to-hide {
+  display: none;
 }
 
 .black-btn {
@@ -105,41 +121,72 @@ header li {
   border: #191919 solid 1px;
   padding: 0.8em 1em;
   border-radius: 25px;
+  font-size: 0.5em;
 }
 
 .hero {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  height: 20vh;
   padding: 1em;
   background-color: #ffc017;
   border: #191919 solid 1px;
   margin-bottom: 2em;
 }
 
-.hero h1 {
+.hero-title {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#m {
+  width: 40%;
+  display: none;
+}
+
+.hero-title h1 {
   font-family: 'Spectral', serif;
   font-weight: 700;
   font-style: normal;
+  font-size: 3em;
 }
 
 .hero button {
   width: 40%;
 }
 
+.hero h3 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+section,
+aside {
+  padding: 1em;
+}
+
 .trends-section {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 2em;
+  border: solid 1px #e6e7e7;
   padding: 1em;
+  flex-direction: column;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
 }
 
 .trend-title {
   display: flex;
   align-items: center;
+  margin-bottom: 1em;
 }
 
 .trends-section article {
   display: flex;
+  margin-bottom: 0.6em;
+  width: 80%;
 }
 
 .writer {
@@ -153,7 +200,7 @@ header li {
 }
 
 .number {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 700;
   color: #e6e7e7;
   margin-right: 0.8em;
@@ -162,7 +209,7 @@ header li {
 
 .writer img {
   border-radius: 50px;
-  width: 30px;
+  width: 15px;
   margin-right: 0.5em;
 }
 
@@ -171,4 +218,154 @@ header li {
   justify-content: space-between;
   font-size: 0.8em;
   color: #929292;
+  margin: 0.2em;
+}
+
+.discover-btn {
+  background-color: white;
+  border: #e6e7e7 solid 1px;
+  padding: 0.5em 1em;
+  margin: 0.2em;
+  font-size: 0.7em;
+}
+
+.discover ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+  margin-top: 1em;
+  border-top: #e6e7e7 solid 1px;
+}
+
+.discover li {
+  margin: 0.5em 1em;
+  font-size: 0.5em;
+  color: #929292;
+}
+
+.full-articles {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-articles article {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.full-articles article > img {
+  width: 40%;
+  max-width: 200px;
+  height: 100%;
+}
+
+.article-description,
+.article-body {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.article-body {
+  padding: 0.5em;
+}
+
+.article-description p {
+  font-size: 0.5em;
+  color: #929292;
+}
+
+.article-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.article-info div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-info p {
+  margin: 1em;
+  color: #929292;
+}
+
+.article-info img {
+  width: 15px;
+  margin: 0.3em;
+}
+
+.topic-btn {
+  margin: 0.2em;
+  padding: 0.3em 0.5em;
+  font-size: 0.5rem;
+  color: #929292;
+  background-color: #e6e7e7;
+  border: #e6e7e7 1px solid;
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 576px) {
+  main {
+    padding-right: 0;
+  }
+
+  .hero {
+    padding-right: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  #m {
+    display: block;
+    margin: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  .to-hide {
+    display: block;
+  }
+  header li {
+    font-size: 0.6em;
+  }
+
+  .articles {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .trends-section article {
+    width: 50%;
+  }
+  .discover ul {
+    padding-bottom: 0;
+  }
+  aside {
+    padding-bottom: 0.3em;
+  }
+  .full-articles {
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+    .toRow {
+        display: flex;
+        justify-content: space-between;
+    }
+    .discover {
+width: 30%;
+    }
+
+    .full-articles {
+        order: -1;
+        width: 70%;
+    }
+    #logo {
+        width: 20%;
+    }
 }
